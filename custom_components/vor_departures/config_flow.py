@@ -41,15 +41,15 @@ from .const import (
 
 
 def _box(minimum: int, maximum: int, unit: str | None = None) -> NumberSelector:
-    return NumberSelector(
-        NumberSelectorConfig(
-            min=minimum,
-            max=maximum,
-            step=1,
-            mode=NumberSelectorMode.BOX,
-            unit_of_measurement=unit,
-        )
-    )
+    config: dict[str, Any] = {
+        "min": minimum,
+        "max": maximum,
+        "step": 1,
+        "mode": NumberSelectorMode.BOX,
+    }
+    if unit:
+        config["unit_of_measurement"] = unit
+    return NumberSelector(NumberSelectorConfig(**config))
 
 
 def _filters_schema(defaults: dict[str, Any]) -> vol.Schema:
