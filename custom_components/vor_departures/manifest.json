@@ -1,11 +1,13 @@
 {
   "domain": "vor_departures",
   "name": "VOR Abfahrten",
-  "codeowners": ["@woistdiekatze"],
+  "codeowners": [
+    "@woistdiekatze"
+  ],
   "config_flow": true,
   "documentation": "https://github.com/woistdiekatze/ha-vor-departures",
-  "issue_tracker": "https://github.com/woistdiekatze/ha-vor-departures/issues",
   "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/woistdiekatze/ha-vor-departures/issues",
   "requirements": [],
-  "version": "0.2.0"
+  "version": "0.2.1"
 }
