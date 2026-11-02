@@ -65,6 +65,9 @@
     "sensor": {
       "next_departure": {
         "name": "Nächste Abfahrt"
+      },
+      "departure": {
+        "name": "Abfahrt {n}"
       }
     }
   }

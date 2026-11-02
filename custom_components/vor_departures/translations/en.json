@@ -65,6 +65,9 @@
     "sensor": {
       "next_departure": {
         "name": "Next departure"
+      },
+      "departure": {
+        "name": "Departure {n}"
       }
     }
   }
