@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Haltestelle suchen",
+        "description": "Name der Haltestelle oder Metahaltestelle, z. B. „Kapelln“ oder „Kapelln Hauptstraße“.",
+        "data": {
+          "query": "Haltestellenname",
+          "access_id": "VAO-Zugangs-ID"
+        },
+        "data_description": {
+          "access_id": "Standard ist die öffentliche ID der AnachB-App. Nur ändern, wenn du eine eigene VAO-ID hast."
+        }
+      },
+      "select": {
+        "title": "Haltestelle auswählen",
+        "data": {
+          "stop": "Haltestelle"
+        }
+      },
+      "filters": {
+        "title": "Filter für {stop}",
+        "description": "Alle Filter sind optional. Mehrere Einträge mit Komma trennen. Ein vorangestelltes „!“ schließt aus.",
+        "data": {
+          "lines": "Linien",
+          "directions": "Fahrtrichtung",
+          "max_departures": "Anzahl Abfahrten",
+          "duration": "Vorschau-Zeitraum",
+          "include_cancelled": "Ausfälle anzeigen",
+          "scan_interval": "Aktualisierung"
+        },
+        "data_description": {
+          "lines": "Genaue Linienbezeichnung, z. B. „1234, 1235“.",
+          "directions": "Teil des Fahrtziels, z. B. „Tulln“ oder „!Tulln“ für alles außer Tulln."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Die VAO-Schnittstelle ist nicht erreichbar.",
+      "no_stops": "Keine Haltestelle mit diesem Namen gefunden.",
+      "unknown": "Unerwarteter Fehler bei der Haltestellensuche."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Filter anpassen",
+        "description": "Alle Filter sind optional. Mehrere Einträge mit Komma trennen. Ein vorangestelltes „!“ schließt aus.",
+        "data": {
+          "lines": "Linien",
+          "directions": "Fahrtrichtung",
+          "max_departures": "Anzahl Abfahrten",
+          "duration": "Vorschau-Zeitraum",
+          "include_cancelled": "Ausfälle anzeigen",
+          "scan_interval": "Aktualisierung"
+        },
+        "data_description": {
+          "lines": "Genaue Linienbezeichnung, z. B. „1234, 1235“.",
+          "directions": "Teil des Fahrtziels, z. B. „Tulln“ oder „!Tulln“ für alles außer Tulln."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_departure": {
+        "name": "Nächste Abfahrt"
+      }
+    }
+  }
+}

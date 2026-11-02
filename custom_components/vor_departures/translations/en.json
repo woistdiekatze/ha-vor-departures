@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Search for a stop",
+        "description": "Name of the stop or meta stop, e.g. \"Kapelln\" or \"Kapelln Hauptstrasse\".",
+        "data": {
+          "query": "Stop name",
+          "access_id": "VAO access ID"
+        },
+        "data_description": {
+          "access_id": "Defaults to the public ID of the AnachB app. Only change it if you have your own VAO ID."
+        }
+      },
+      "select": {
+        "title": "Choose a stop",
+        "data": {
+          "stop": "Stop"
+        }
+      },
+      "filters": {
+        "title": "Filters for {stop}",
+        "description": "All filters are optional. Separate multiple entries with commas. A leading \"!\" excludes.",
+        "data": {
+          "lines": "Lines",
+          "directions": "Direction",
+          "max_departures": "Number of departures",
+          "duration": "Look-ahead",
+          "include_cancelled": "Show cancellations",
+          "scan_interval": "Update interval"
+        },
+        "data_description": {
+          "lines": "Exact line name, e.g. \"1234, 1235\".",
+          "directions": "Part of the destination, e.g. \"Tulln\" or \"!Tulln\" for everything except Tulln."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "The VAO interface is not reachable.",
+      "no_stops": "No stop found with that name.",
+      "unknown": "Unexpected error during the stop search."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Adjust filters",
+        "description": "All filters are optional. Separate multiple entries with commas. A leading \"!\" excludes.",
+        "data": {
+          "lines": "Lines",
+          "directions": "Direction",
+          "max_departures": "Number of departures",
+          "duration": "Look-ahead",
+          "include_cancelled": "Show cancellations",
+          "scan_interval": "Update interval"
+        },
+        "data_description": {
+          "lines": "Exact line name, e.g. \"1234, 1235\".",
+          "directions": "Part of the destination, e.g. \"Tulln\" or \"!Tulln\" for everything except Tulln."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_departure": {
+        "name": "Next departure"
+      }
+    }
+  }
+}
